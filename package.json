@@ -1,0 +1,22 @@
+{
+  "name": "webgl-pbr",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/lib/webgl-pbr.js",
+  "files": [
+    "./dist/lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1polygon/webgl-pbr.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^3.2.3"
+  }
+}
