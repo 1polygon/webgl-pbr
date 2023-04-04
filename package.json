@@ -1,7 +1,8 @@
 {
-  "name": "webgl-pbr",
-  "private": true,
+  "name": "@onepolygon/webgl-pbr",
   "version": "0.0.0",
+  "author": "1polygon",
+  "license": "MIT",
   "type": "module",
   "main": "./dist/lib/webgl-pbr.js",
   "files": [
