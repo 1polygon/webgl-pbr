@@ -13,8 +13,6 @@ import {
 } from "./src/index";
 
 const canvas = document.createElement("canvas");
-canvas.width = 1280;
-canvas.height = 720;
 document.body.appendChild(canvas);
 
 const scene = new Scene(canvas);

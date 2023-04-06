@@ -46,6 +46,8 @@ export class Scene extends EventEmitter {
 
         this.width = canvas.width;
         this.height = canvas.height;
+        this.resizeObserver = new ResizeObserver(this.#resize.bind(this));
+        this.resizeObserver.observe(this.canvas);
 
         this.#init(this.gl);
 
@@ -107,6 +109,15 @@ export class Scene extends EventEmitter {
         this.emit("render", this.deltaTime);
     }
 
+    #resize() {
+        this.width = this.canvas.clientWidth;
+        this.height = this.canvas.clientHeight;
+        this.canvas.width = this.width;
+        this.canvas.height = this.height;
+        this.gl.viewport(0, 0, this.width, this.height);
+        this.emit("resize");
+    }
+
     /**
      * Adds an object to the scene
      * @param {SceneObject} object must inerhit from SceneObject
@@ -159,5 +170,6 @@ export class Scene extends EventEmitter {
 
     destroy() {
         this.input.destroy();
+        this.resizeObserver.disconnect();
     }
 }

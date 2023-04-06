@@ -4,6 +4,7 @@ import { SceneObject } from "./scene-object";
 import { FreeCam } from "./free-cam";
 import { Mesh } from "./mesh";
 import { MeshRenderer } from "./mesh-renderer";
+import { Shader } from "./shader";
 import { Material } from "./material";
 import { Texture2D } from "./texture";
 import { PbrMaterial } from "./materials/pbr-material";
@@ -25,6 +26,7 @@ export {
     Mesh,
     MeshRenderer,
     Texture2D,
+    Shader,
     Material,
     PbrMaterial,
     UnlitMaterial,
